@@ -130,10 +130,12 @@ so web, mobile and the Edge Function all use the same logic.
    detailed menstrual tracking + prediction, calendar view, stats, export/delete.
 3. **Phase 3 (mobile):** Expo app on the shared packages, Expo push, store releases.
 
-## 4. Open points (suggestions)
-- Add **Moustache (trim)** for males? It is one of the fitrah items named in the
-  40-day hadith.
-- Optional **discreet mode** toggle (neutral wording in push and email subjects)
-  for users who share devices, even though the default is explicit.
-- Languages: English only for now. The code will be i18n-ready so Bangla can be
-  added later.
+## 4. Decisions log
+- **Beard** is tracked as **"Beard (trim)"** (confirmed).
+- **Discreet mode** is included: an optional toggle, **off by default**. When on,
+  push, email subjects and calendar titles use neutral wording ("Hygge: a
+  reminder is due"). The full text is shown only inside the app.
+- **Moustache (trim)**, for males, is offered as an optional item, **disabled by
+  default**, with a 40-day interval. It still needs the owner's confirmation.
+- Languages: English only for now; the code is i18n-ready so Bangla can be added later.
+- Detailed build plan: see [`BUILD_PLAN.md`](./BUILD_PLAN.md).
