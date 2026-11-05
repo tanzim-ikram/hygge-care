@@ -104,22 +104,30 @@ languages can be added later.
   mode.
 
 ### Main screen (kept simple)
-- A night-sky panel at the top shows the most urgent item. Hair items show
-  **growing strands** that rise toward a dashed due line; nails show a large
-  filling icon. It also has **I did it today** and **Tomorrow** (snooze).
-- Below it, **Your care**: a 2-column grid of small tiles (filling item icon, name,
-  "12 days left", a one-tap check button).
+- A night-sky panel at the top shows the most urgent item as a **realistic growth
+  illustration**: hair growing out of a skin cross-section toward a dashed due line
+  (nails: a fingertip whose nail grows past the skin). It also has **I did it
+  today** and **Tomorrow** (snooze).
+- Below it, **Your care**: a 2-column grid of every item (including the one in Next
+  up), each with a small version of the same illustration, its name, "12 days
+  left" and a one-tap check button.
 - A floating **"Log several"** button, within thumb reach on mobile.
 - Bottom navigation: **Today · Calendar · Cycle** (female only) **· Settings**.
 
 ### Design system
-- **Growing strands** are the signature visual. Gold strands grow from a "skin
-  line" each day and reach a dashed due line on the due date. Past due, they turn
-  amber.
-- **Filling item icons:** each item has its own icon: pubic hair (three strands),
-  armpit, nail, head hair, beard, moustache, body hair (leg), facial hair, and a
-  drop for the period. The tile behind the icon fills from the bottom as days
-  pass. It turns gold when due, and amber with a soft glow when past.
+- **The growth illustration** is the signature visual. It is a cross-section of
+  skin (surface, follicle openings, pores, roots and bulbs underneath) with
+  tapered, slightly curved hairs growing out of it. Hair length follows the
+  countdown: it reaches the dashed due line on the due date. Past due, it grows
+  beyond the line and the frame glows amber.
+  - Hair type changes per item: curly (pubic), wavy (armpit), straighter and
+    longer (head hair), coarse (beard, moustache), fine and lighter (body and
+    facial hair).
+  - Nails are a fingertip whose white free edge grows past the skin.
+  - It is generated in code (`hairScene` / `nailScene`), so it scales from the
+    56px tile to the large hero.
+  - v1 uses one medium skin tone and dark hair. A skin-tone and hair-color
+    setting is a planned follow-up.
 - **Cycle orbit:** a ring of 28 dots. Period days are drops, the estimated fertile
   window is outlined, and today is gold.
 - **The sky:** each main screen opens with a night-sky panel with soft stars.
