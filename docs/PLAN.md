@@ -133,8 +133,6 @@ languages can be added later.
 - **The sky:** each main screen opens with a night-sky panel with soft stars.
 - **Gold `#F4BE4F` is the only action color** (primary buttons, the "on" switch
   knob) in both themes. The gender tint is for selection and accents.
-- The "skin line" uses a theme color rather than a skin tone, so it represents
-  nobody's skin in particular.
 - Type: Bricolage Grotesque (display, titles, numbers) + Figtree (body).
 - Shape: pills for every button, chip and field; 28px cards; 40px sky edge; 36px
   sheets.
