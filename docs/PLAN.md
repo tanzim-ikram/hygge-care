@@ -104,21 +104,29 @@ languages can be added later.
   mode.
 
 ### Main screen (kept simple)
-- A night-sky panel at the top with the most urgent item's **moon**, its "nights
-  strip", **I did it today** and **Tomorrow** (snooze).
-- Below it, **Your moons**: a 2-column grid of small tiles (moon, name, "12 days
-  left", a one-tap check button).
+- A night-sky panel at the top shows the most urgent item. Hair items show
+  **growing strands** that rise toward a dashed due line; nails show a large
+  filling icon. It also has **I did it today** and **Tomorrow** (snooze).
+- Below it, **Your care**: a 2-column grid of small tiles (filling item icon, name,
+  "12 days left", a one-tap check button).
 - A floating **"Log several"** button, within thumb reach on mobile.
 - Bottom navigation: **Today · Calendar · Cycle** (female only) **· Settings**.
 
-### Design system: "Moonlit"
-- **The moon** is the signature component. Every item is a moon that waxes from new
-  (just done) to full (due); past due, it glows. This echoes the hadith's "forty
-  nights".
-- **The nights strip:** one mark per day of the interval, filled as days pass.
+### Design system
+- **Growing strands** are the signature visual. Gold strands grow from a "skin
+  line" each day and reach a dashed due line on the due date. Past due, they turn
+  amber.
+- **Filling item icons:** each item has its own icon: pubic hair (three strands),
+  armpit, nail, head hair, beard, moustache, body hair (leg), facial hair, and a
+  drop for the period. The tile behind the icon fills from the bottom as days
+  pass. It turns gold when due, and amber with a soft glow when past.
+- **Cycle orbit:** a ring of 28 dots. Period days are drops, the estimated fertile
+  window is outlined, and today is gold.
 - **The sky:** each main screen opens with a night-sky panel with soft stars.
-- **Gold is the only action color** (primary buttons, the "on" switch knob) in both
-  themes. The gender tint is for selection and accents.
+- **Gold `#F4BE4F` is the only action color** (primary buttons, the "on" switch
+  knob) in both themes. The gender tint is for selection and accents.
+- The "skin line" uses a theme color rather than a skin tone, so it represents
+  nobody's skin in particular.
 - Type: Bricolage Grotesque (display, titles, numbers) + Figtree (body).
 - Shape: pills for every button, chip and field; 28px cards; 40px sky edge; 36px
   sheets.
@@ -131,7 +139,7 @@ languages can be added later.
 
   | Situation | Wording |
   |---|---|
-  | On track | "You're on track 🌿" |
+  | On track | "You're on track" |
   | Due soon | "Coming up in 3 days" |
   | Due today | "Today's a good day for it" |
   | Overdue | "It's been a little while. Whenever you're ready" (soft amber, never red) |
