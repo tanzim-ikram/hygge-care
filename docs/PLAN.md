@@ -27,7 +27,8 @@ Platforms: **web first** (installable PWA), then **Android + iOS** with shared c
 | Armpit hair     |  ✅  |   ✅   | 40 days |
 | Nails           |  ✅  |   ✅   | **7 days** |
 | Head hair       |  ✅  |   ✅   | 40 days |
-| Beard (trim)    |  ✅  |        | 40 days |
+| Beard (shave or trim, user's choice) |  ✅  |  | 40 days |
+| Moustache (trim) |  ✅  |        | 40 days |
 | Body hair       |      |   ✅   | 40 days |
 | Facial hair     |      |   ✅   | 40 days |
 | Menstrual cycle |      |   ✅   | predicted (see below) |
@@ -109,7 +110,7 @@ hygge-care/
 - `profiles`: id (= auth user), display_name, gender (`male|female`), timezone,
   reminder_hour, theme_mode, channel toggles, ics_token
 - `tracker_items`: id, user_id, kind, interval_days, lead_days, remind_on_due,
-  remind_overdue_daily, enabled
+  remind_overdue_daily, enabled, variant (`shave|trim`, beard only)
 - `grooming_logs`: id, user_id, item_id, done_on (DATE), note
 - `cycles`: id, user_id, start_date, end_date
 - `cycle_day_logs`: user_id, date, flow, symptoms[], mood, note
@@ -131,11 +132,12 @@ so web, mobile and the Edge Function all use the same logic.
 3. **Phase 3 (mobile):** Expo app on the shared packages, Expo push, store releases.
 
 ## 4. Decisions log
-- **Beard** is tracked as **"Beard (trim)"** (confirmed).
+- **Beard**: each male user chooses **Shave** or **Trim** (default: Trim). The
+  choice is asked during onboarding, can be changed in the item settings, and sets
+  the wording ("Beard shave due in 3 days" / "Beard trim due in 3 days").
 - **Discreet mode** is included: an optional toggle, **off by default**. When on,
   push, email subjects and calendar titles use neutral wording ("Hygge: a
   reminder is due"). The full text is shown only inside the app.
-- **Moustache (trim)**, for males, is offered as an optional item, **disabled by
-  default**, with a 40-day interval. It still needs the owner's confirmation.
+- **Moustache (trim)** is a standard male item, **enabled by default**, 40 days (confirmed).
 - Languages: English only for now; the code is i18n-ready so Bangla can be added later.
 - Detailed build plan: see [`BUILD_PLAN.md`](./BUILD_PLAN.md).

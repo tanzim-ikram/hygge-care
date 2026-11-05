@@ -73,7 +73,8 @@ right away.
 - **Done when:** `pnpm dev` shows a placeholder Hygge page and CI is green
 
 ### M2 · Core logic (`packages/core`)
-- Item catalog (kinds, labels, gender, default interval: 40 days, nails 7)
+- Item catalog (kinds, labels, gender, default interval: 40 days, nails 7;
+  beard has a `shave | trim` variant that changes its label)
 - `getDueDate`, `getStatus`, `getRemindersFor(date)`, notification text builder
   (explicit/discreet)
 - `predictCycle`, `cycleStats`
@@ -93,7 +94,8 @@ right away.
 
 ### M4 · Auth & onboarding
 - Sign in with Google or an email magic link; protected routes via middleware
-- Onboarding (3 steps): name → gender (male/female cards, the theme previews live) →
+- Onboarding (3 steps): name → gender (male/female cards, the theme previews live;
+  males also pick beard Shave or Trim) →
   time zone (auto-detected) + reminder time (default 9:00)
 - **Done when:** a new user can sign up and lands on the dashboard with their
   gender's items already created
@@ -102,7 +104,7 @@ right away.
 - A card per item: countdown ring ("12 days left"), status color, last done date
 - **Mark done**: today in one tap, or pick a past date; undo shown as a toast
 - Item settings sheet: enable or disable, interval, lead days, on-due and
-  overdue-daily toggles
+  overdue-daily toggles; for the beard, a Shave/Trim switch
 - Sorting: overdue first, then due today, due soon, ok
 - In-app reminders: a banner at the top for overdue and due-today items
 - **Done when:** marking an item done resets its countdown; editing the interval
