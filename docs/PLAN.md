@@ -104,8 +104,8 @@ languages can be added later.
   mode.
 
 ### Main screen (kept simple)
-- A night-sky panel at the top shows the most urgent item as a **realistic growth
-  illustration**: hair growing out of a skin cross-section toward a dashed due line
+- A night-sky panel at the top shows the most urgent item as a **square, realistic
+  growth illustration** (200×200, rounded): hair growing out of a skin cross-section toward a dashed due line
   (nails: a fingertip whose nail grows past the skin). It also has **I did it
   today** and **Tomorrow** (snooze).
 - Below it, **Your care**: a 2-column grid of every item (including the one in Next
@@ -126,6 +126,10 @@ languages can be added later.
   - Nails are a fingertip whose white free edge grows past the skin.
   - It is generated in code (`hairScene` / `nailScene`), so it scales from the
     56px tile to the large hero.
+  - It appears only where real progress is shown: the Today screen, item settings
+    and history. Onboarding uses its own visuals instead: a cluster of grooming-tool
+    tiles (scissors, razor, comb, clipper), a gold step icon with a progress bar,
+    male/female symbols, and line icons for each item.
   - v1 uses one medium skin tone and dark hair. A skin-tone and hair-color
     setting is a planned follow-up.
 - **Cycle orbit:** a ring of 28 dots. Period days are drops, the estimated fertile
