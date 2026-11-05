@@ -157,7 +157,7 @@ languages can be added later.
 - One theme per gender, so every screen stays consistent:
   - Male: **Indigo night** (indigo sky, mist background, indigo tint)
   - Female: **Plum dusk** (plum sky, blush background, raspberry tint)
-  - Shared: moon gold `#F4BE4F` for every primary action
+  - Shared: gold `#F4BE4F` for every primary action
 - Light, dark or follow the system.
 
 ### Offline

@@ -98,7 +98,7 @@ are switched off, and their history is kept.
   - the onboarding flow
   - the main screen ("Next up" + compact rows + "Log several")
   - the item settings sheet and empty states
-  - male and female themes, light and dark ("Moonlit" design system)
+  - male and female themes, light and dark
   - Islamic and Default mode
 - **Owner approves the look before any real screens are built.**
 
