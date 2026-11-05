@@ -105,7 +105,7 @@ languages can be added later.
 
 ### Main screen (kept simple)
 - A night-sky panel at the top shows the most urgent item as a **square, realistic
-  growth illustration** (200×200, rounded): hair growing out of a skin cross-section toward a dashed due line
+  growth illustration** (200×200, rounded): hair growing out of a skin cross-section
   (nails: a fingertip whose nail grows past the skin). It also has **I did it
   today** and **Tomorrow** (snooze).
 - Below it, **Your care**: a 2-column grid of every item (including the one in Next
@@ -118,8 +118,8 @@ languages can be added later.
 - **The growth illustration** is the signature visual. It is a cross-section of
   skin (surface, follicle openings, pores, roots and bulbs underneath) with
   tapered, slightly curved hairs growing out of it. Hair length follows the
-  countdown: it reaches the dashed due line on the due date. Past due, it grows
-  beyond the line and the frame glows amber.
+  countdown: it reaches full length on the due date (no due line or label).
+  Past due, it keeps growing, a little longer, and the frame glows amber.
   - Hair type changes per item: curly (pubic), wavy (armpit), straighter and
     longer (head hair), coarse (beard, moustache), fine and lighter (body and
     facial hair).
