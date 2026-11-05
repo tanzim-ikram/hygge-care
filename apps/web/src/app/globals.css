@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Placeholder tokens. The real themes (3 palettes per gender × light/dark) arrive in M7,
+   after the design is approved in M2.5. */
+:root {
+  --background: #f7f5f2;
+  --foreground: #23232a;
+  --muted: #6b6b76;
+  --accent: #3b6fb6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #16171b;
+    --foreground: #ecebf0;
+    --muted: #a3a3ad;
+    --accent: #7aa7e6;
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    ui-rounded,
+    "SF Pro Rounded",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
