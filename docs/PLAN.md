@@ -109,8 +109,9 @@ languages can be added later.
   (nails: a fingertip whose nail grows past the skin). It also has **I did it
   today** and **Tomorrow** (snooze).
 - Below it, **Your care**: a 2-column grid of every item (including the one in Next
-  up), each with a small version of the same illustration, its name, "12 days
-  left" and a one-tap check button.
+  up), each with a square **item icon**, its name, "12 days left" and a one-tap
+  check button. The icon square is tinted when on track, gold when due today, and
+  amber with a soft glow when past due.
 - A floating **"Log several"** button, within thumb reach on mobile.
 - Bottom navigation: **Today · Calendar · Cycle** (female only) **· Settings**.
 
@@ -134,7 +135,20 @@ languages can be added later.
     setting is a planned follow-up.
 - **Cycle orbit:** a ring of 28 dots. Period days are drops, the estimated fertile
   window is outlined, and today is gold.
-- **The sky:** each main screen opens with a night-sky panel with soft stars.
+- **The sky:** each main screen opens with a sky panel. **Day theme:** pale sky
+  (blue for male, blush for female) with a soft sun and clouds. **Night theme:**
+  deep indigo or plum with stars.
+- **Item icons:** real, recognizable glyphs from open-source sets:
+  - Pubic hair: razor (Material Design Icons, Apache 2.0)
+  - Armpits: raised arms (Material Design Icons)
+  - Nails: fingernail (Health Icons, MIT)
+  - Head hair: scissors (Material Design Icons)
+  - Beard: beard (Game Icons by Delapouite, CC BY 3.0, so it needs a credit
+    line in the app's About page)
+  - Moustache: moustache (Material Design Icons)
+  - Body hair: leg (Health Icons)
+  - Facial hair: woman's face (Material Design Icons)
+  - Period: blood drop (Health Icons)
 - **Gold `#F4BE4F` is the only action color** (primary buttons, the "on" switch
   knob) in both themes. The gender tint is for selection and accents.
 - Type: Bricolage Grotesque (display, titles, numbers) + Figtree (body).
@@ -164,11 +178,11 @@ languages can be added later.
 - An on-time streak and the average actual interval.
 
 ### Themes
-- One theme per gender, so every screen stays consistent:
-  - Male: **Indigo night** (indigo sky, mist background, indigo tint)
-  - Female: **Plum dusk** (plum sky, blush background, raspberry tint)
+- One color family per gender, so every screen stays consistent:
+  - Male: **Indigo** (day: pale blue sky, mist background; night: indigo sky)
+  - Female: **Plum** (day: blush sky; night: plum sky; raspberry tint)
   - Shared: gold `#F4BE4F` for every primary action
-- Light, dark or follow the system.
+- **Day** (light) and **Night** (dark) themes, or follow the system.
 
 ### Offline
 - The PWA caches the app shell. Logs made while offline are kept on the device
