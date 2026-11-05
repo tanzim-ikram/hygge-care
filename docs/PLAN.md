@@ -185,7 +185,6 @@ hygge-care/
 ├─ supabase/
 │  ├─ migrations/     SQL schema + RLS policies
 │  └─ functions/      send-reminders, ics-feed, action (Done/Snooze links)
-├─ design/            clickable mockup for design approval
 └─ docs/
 ```
 

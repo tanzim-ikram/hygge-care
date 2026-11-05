@@ -80,19 +80,20 @@ are switched off, and their history is kept.
 
 ## 2. Milestones
 
-### M1 · Foundation ✅ in progress
+### M1 · Foundation ✅ done
 - pnpm + Turborepo, strict TypeScript, Prettier
 - `apps/web` (Next.js + Tailwind), `packages/core`, `packages/config`
 - Vitest, and a GitHub Actions CI workflow (type-check, test, build)
 - **Done when:** the web app builds, the tests run and CI is green
 
-### M2 · Core logic
+### M2 · Core logic ✅ done (53 tests)
 - Catalog, dates, status, onboarding mapping, digest (with gentle explicit and
   discreet wording), pauses, Qurbani window, preferred day, Hijri, cycle prediction
 - **Done when:** a wide unit-test suite passes, covering month and leap-year
   boundaries, quiet hours, the overdue cap, snooze, and pause edge cases
 
-### M2.5 · Design approval 🛑 checkpoint
+### M2.5 · Design approval 🛑 waiting for the owner
+- Mockup: https://claude.ai/artifact/1kvrohodNrh1Xry6Prk57k
 - A clickable HTML mockup showing:
   - the onboarding flow
   - the main screen ("Next up" + compact rows + "Log several")
