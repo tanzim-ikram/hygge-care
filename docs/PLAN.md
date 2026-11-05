@@ -104,11 +104,27 @@ languages can be added later.
   mode.
 
 ### Main screen (kept simple)
-- A large **"Next up"** card for the most urgent item, with a one-tap **Done**.
-- Below it, compact rows for every item: icon, name, a small ring, and "12 days
-  left".
-- A **"Log several"** button anchored at the bottom, within thumb reach on mobile.
-- Bottom navigation: **Home · Calendar · Cycle** (female only) **· Settings**.
+- A night-sky panel at the top with the most urgent item's **moon**, its "nights
+  strip", **I did it today** and **Tomorrow** (snooze).
+- Below it, **Your moons**: a 2-column grid of small tiles (moon, name, "12 days
+  left", a one-tap check button).
+- A floating **"Log several"** button, within thumb reach on mobile.
+- Bottom navigation: **Today · Calendar · Cycle** (female only) **· Settings**.
+
+### Design system: "Moonlit"
+- **The moon** is the signature component. Every item is a moon that waxes from new
+  (just done) to full (due); past due, it glows. This echoes the hadith's "forty
+  nights".
+- **The nights strip:** one mark per day of the interval, filled as days pass.
+- **The sky:** each main screen opens with a night-sky panel with soft stars.
+- **Gold is the only action color** (primary buttons, the "on" switch knob) in both
+  themes. The gender tint is for selection and accents.
+- Type: Bricolage Grotesque (display, titles, numbers) + Figtree (body).
+- Shape: pills for every button, chip and field; 28px cards; 40px sky edge; 36px
+  sheets.
+- The same tokens and components are used on every screen. The mockup's design
+  system board is the source of truth:
+  https://claude.ai/artifact/1kvrohodNrh1Xry6Prk57k
 
 ### Gentle language & empty states
 - Calm wording throughout, never alarming:
@@ -130,9 +146,10 @@ languages can be added later.
 - An on-time streak and the average actual interval.
 
 ### Themes
-- The gender sets a default theme, and **2–3 color choices** are offered within it.
-  - Male: Ocean (deep blue), Teal, Slate
-  - Female: Rose, Blush pink, Lavender
+- One theme per gender, so every screen stays consistent:
+  - Male: **Indigo night** (indigo sky, mist background, indigo tint)
+  - Female: **Plum dusk** (plum sky, blush background, raspberry tint)
+  - Shared: moon gold `#F4BE4F` for every primary action
 - Light, dark or follow the system.
 
 ### Offline
@@ -189,7 +206,7 @@ hygge-care/
 ```
 
 ### Data model
-- `profiles`: id, display_name, gender, mode (`islamic|default`), theme_palette,
+- `profiles`: id, display_name, gender, mode (`islamic|default`),
   theme_mode, timezone, reminder_hour, quiet_start, quiet_end, discreet,
   preferred_weekday, plans_qurbani, qurbani_day, hijri_offset, channel toggles,
   ics_token

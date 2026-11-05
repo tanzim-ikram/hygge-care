@@ -98,7 +98,7 @@ are switched off, and their history is kept.
   - the onboarding flow
   - the main screen ("Next up" + compact rows + "Log several")
   - the item settings sheet and empty states
-  - male and female themes in all palettes, light and dark
+  - male and female themes, light and dark ("Moonlit" design system)
   - Islamic and Default mode
 - **Owner approves the look before any real screens are built.**
 
@@ -131,10 +131,10 @@ are switched off, and their history is kept.
   dates (Islamic mode), streak + average interval
 
 ### M7 · Settings & themes
-- Palettes (3 per gender) × light/dark/system; mode switch (Islamic/Default);
+- Light/dark/system; mode switch (Islamic/Default);
   gender; time zone; reminder time; quiet hours; discreet mode; preferred day;
   Qurbani; Hijri offset; ihram/custom pauses; channel toggles
-- **Done when:** every palette passes WCAG AA contrast in both light and dark
+- **Done when:** both gender themes pass WCAG AA contrast in light and dark
 
 ### M8 · Reminder delivery
 - PWA manifest/icons/service worker, install prompt
