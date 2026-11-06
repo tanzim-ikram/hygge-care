@@ -2,7 +2,7 @@
  * All user-facing wording lives here: calm, gentle, never alarming.
  * Keep it in one place so other languages can be added later.
  */
-import { plural } from "./dates.js";
+import { diffDays, plural, type LocalDate } from "./dates.js";
 import type { ItemState } from "./status.js";
 
 export const APP_NAME = "Hygge";
@@ -111,3 +111,12 @@ export const ISLAMIC_REFERENCES = {
     source: null,
   },
 } as const;
+
+/** "Done today", "Last done yesterday", "Last done 3 days ago", or "Not logged yet". */
+export function lastDoneText(lastDone: LocalDate | null, today: LocalDate): string {
+  if (!lastDone) return "Not logged yet";
+  const days = diffDays(today, lastDone);
+  if (days <= 0) return "Done today";
+  if (days === 1) return "Last done yesterday";
+  return `Last done ${days} days ago`;
+}

@@ -8,6 +8,7 @@ import {
   rowSubtitle,
   sortByUrgency,
   statusHeadline,
+  lastDoneText,
   type ItemSettings,
 } from "../src/index.js";
 
@@ -85,5 +86,14 @@ describe("item status", () => {
     expect(order.slice(0, 3)).toEqual(["pubic_hair", "nails", "armpit_hair"]);
     expect(nextUp(states)!.item.kind).toBe("pubic_hair");
     expect(nextUp([])).toBeNull();
+  });
+});
+
+describe("lastDoneText", () => {
+  it("reads naturally", () => {
+    expect(lastDoneText(null, "2026-11-05")).toBe("Not logged yet");
+    expect(lastDoneText("2026-11-05", "2026-11-05")).toBe("Done today");
+    expect(lastDoneText("2026-11-04", "2026-11-05")).toBe("Last done yesterday");
+    expect(lastDoneText("2026-10-26", "2026-11-05")).toBe("Last done 10 days ago");
   });
 });

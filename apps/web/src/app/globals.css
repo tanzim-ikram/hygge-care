@@ -1,39 +1,165 @@
 @import "tailwindcss";
 
-/* Placeholder tokens. The real themes (3 palettes per gender × light/dark) arrive in M7,
-   after the design is approved in M2.5. */
+/*
+ * Hygge design tokens. Three families (neutral before gender is chosen, male, female) x day/night.
+ * Identical on every screen; components only use these variables.
+ */
 :root {
-  --background: #f7f5f2;
-  --foreground: #23232a;
-  --muted: #6b6b76;
-  --accent: #3b6fb6;
+  --gold: #f4be4f;
+  --on-gold: #241b05;
+  --glow: rgba(244, 190, 79, 0.3);
+  --warm-fill: #f5b860;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #16171b;
-    --foreground: #ecebf0;
-    --muted: #a3a3ad;
-    --accent: #7aa7e6;
-  }
+/* ---- neutral ---- */
+:root,
+[data-family="neutral"][data-theme="day"] {
+  --bg: #f1f1f5;
+  --paper: #ffffff;
+  --ink: #1c1d2b;
+  --muted: #55576a;
+  --line: #e0e0e9;
+  --tint: #1c1d2b;
+  --tint-soft: #e6e6ee;
+  --sky: #e4e6ee;
+  --sky-ink: #1c1d2b;
+  --sky-muted: #55576a;
+  --sky-line: rgba(28, 29, 43, 0.16);
+  --warm: #9a5b00;
+  --warm-soft: #ffe9c7;
+  --shadow: rgba(28, 29, 43, 0.2);
+  --scrim: rgba(12, 12, 20, 0.45);
+}
+[data-family="neutral"][data-theme="night"] {
+  --bg: #101118;
+  --paper: #1a1b25;
+  --ink: #f0f0f7;
+  --muted: #a7a8ba;
+  --line: #2b2c3a;
+  --tint: #f0f0f7;
+  --tint-soft: #2b2c3a;
+  --sky: #1a1b25;
+  --sky-ink: #f0f0f7;
+  --sky-muted: #a7a8ba;
+  --sky-line: rgba(240, 240, 247, 0.18);
+  --warm: #f5b860;
+  --warm-soft: #3a2a12;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --scrim: rgba(0, 0, 0, 0.55);
+}
+/* ---- male: indigo ---- */
+[data-family="male"][data-theme="day"] {
+  --bg: #eef0f8;
+  --paper: #ffffff;
+  --ink: #151a3d;
+  --muted: #565c7e;
+  --line: #dcdfee;
+  --tint: #3140b5;
+  --tint-soft: #e0e3f8;
+  --sky: #d9e4ff;
+  --sky-ink: #151a3d;
+  --sky-muted: #4b5480;
+  --sky-line: rgba(21, 26, 61, 0.16);
+  --warm: #9a5b00;
+  --warm-soft: #ffe9c7;
+  --shadow: rgba(21, 26, 61, 0.22);
+  --scrim: rgba(12, 15, 38, 0.45);
+}
+[data-family="male"][data-theme="night"] {
+  --bg: #0b0e24;
+  --paper: #161a3a;
+  --ink: #eceeff;
+  --muted: #a6abcf;
+  --line: #272c55;
+  --tint: #a3adff;
+  --tint-soft: #222956;
+  --sky: #151938;
+  --sky-ink: #eceeff;
+  --sky-muted: #a6abcf;
+  --sky-line: rgba(236, 238, 255, 0.18);
+  --warm: #f5b860;
+  --warm-soft: #3a2a12;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --scrim: rgba(0, 0, 0, 0.55);
+}
+/* ---- female: plum ---- */
+[data-family="female"][data-theme="day"] {
+  --bg: #fbeff3;
+  --paper: #ffffff;
+  --ink: #3b1232;
+  --muted: #76566b;
+  --line: #f2dae3;
+  --tint: #c2306b;
+  --tint-soft: #f9dde8;
+  --sky: #ffe1ea;
+  --sky-ink: #3b1232;
+  --sky-muted: #7a4d66;
+  --sky-line: rgba(59, 18, 50, 0.16);
+  --warm: #9a5b00;
+  --warm-soft: #ffe9c7;
+  --shadow: rgba(59, 18, 50, 0.22);
+  --scrim: rgba(40, 10, 32, 0.45);
+}
+[data-family="female"][data-theme="night"] {
+  --bg: #1b0a17;
+  --paper: #2a1225;
+  --ink: #fceaf2;
+  --muted: #c9a3b8;
+  --line: #43213d;
+  --tint: #ff8dba;
+  --tint-soft: #4a1f40;
+  --sky: #2a1225;
+  --sky-ink: #fceaf2;
+  --sky-muted: #c9a3b8;
+  --sky-line: rgba(252, 234, 242, 0.18);
+  --warm: #f5b860;
+  --warm-soft: #3a2a12;
+  --shadow: rgba(0, 0, 0, 0.5);
+  --scrim: rgba(0, 0, 0, 0.55);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-bg: var(--bg);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
-  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --color-tint: var(--tint);
+  --color-tint-soft: var(--tint-soft);
+  --color-sky: var(--sky);
+  --color-sky-ink: var(--sky-ink);
+  --color-sky-muted: var(--sky-muted);
+  --color-sky-line: var(--sky-line);
+  --color-gold: var(--gold);
+  --color-on-gold: var(--on-gold);
+  --color-warm: var(--warm);
+  --color-warm-soft: var(--warm-soft);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-body);
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family:
-    ui-rounded,
-    "SF Pro Rounded",
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    sans-serif;
+  min-height: 100dvh;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+.display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }

@@ -92,7 +92,7 @@ are switched off, and their history is kept.
 - **Done when:** a wide unit-test suite passes, covering month and leap-year
   boundaries, quiet hours, the overdue cap, snooze, and pause edge cases
 
-### M2.5 · Design approval 🛑 waiting for the owner
+### M2.5 · Design approval ✅ approved by the owner
 - Mockup: https://claude.ai/artifact/1kvrohodNrh1Xry6Prk57k
 - A clickable HTML mockup showing:
   - the onboarding flow
@@ -102,7 +102,7 @@ are switched off, and their history is kept.
   - Islamic and Default mode
 - **Owner approves the look before any real screens are built.**
 
-### M3 · Database
+### M3 · Database ✅ written, not yet applied to a real project
 - Migrations: enums, the tables from PLAN.md §2, `updated_at` triggers
 - **RLS on every table**; anonymous users are covered by the same policies
 - A trigger that creates `profiles` on signup; an `apply_gender(gender)` function that
@@ -110,14 +110,14 @@ are switched off, and their history is kept.
 - Generated types; `packages/api` with typed queries + TanStack Query hooks
 - **Done when:** the RLS tests prove isolation between users
 
-### M4 · Auth & onboarding
+### M4 · Auth & onboarding 🟡 onboarding built; Google/email sign-in waits for keys
 - An anonymous session on first visit. "Save your data" links Google or an email link
   (Supabase identity linking, so no data is lost)
 - The 5-step onboarding from PLAN.md, every step skippable
 - **Done when:** a brand-new visitor reaches a populated main screen in under a
   minute, without an account
 
-### M5 · Main screen + logging
+### M5 · Main screen + logging ✅ built (local mode); beta checkpoint next
 - "Next up" card, compact rows, "Log several" sheet, Done + undo, a past-date picker
 - Item settings sheet (interval, lead days, rules, Shave/Trim, enabled), with the
   gentle 40-day note in Islamic mode
