@@ -1,0 +1,13 @@
+# Local Supabase config (used by `supabase start`). Hosted projects are configured in the dashboard.
+project_id = "hygge"
+
+[auth]
+enable_anonymous_sign_ins = true       # "Try without an account"
+enable_manual_linking = true           # link Google / email to a guest later, keeping data
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+
+[auth.external.google]
+enabled = true
+client_id = "env(SUPABASE_AUTH_GOOGLE_CLIENT_ID)"
+secret = "env(SUPABASE_AUTH_GOOGLE_SECRET)"

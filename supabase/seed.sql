@@ -1,0 +1,1 @@
+-- No seed data: every user starts empty.
